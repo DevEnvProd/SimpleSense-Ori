@@ -17,7 +17,7 @@ export default function AboutPage() {
       
       <div className="prose prose-lg prose-p:text-text/80 mx-auto text-left space-y-6">
         <p>
-          Hello, and welcome to a quiet corner of the internet. I started Simple Sense MY as a personal diary to document my journey towards a more intentional life in busy Kuala Lumpur.
+          Hello, and welcome to a quiet corner of the internet. I started Simple Sense Malaysia as a personal diary to document my journey towards a more intentional life in busy Kuala Lumpur.
         </p>
         <p>
           In a world constantly shouting at us to buy more, do more, and be more, this space is a gentle reminder that sometimes, less is actually more. A smaller wardrobe can mean less morning stress. A simpler meal can bring more joy. A tighter budget can lead to incredible creativity and unexpected freedom.

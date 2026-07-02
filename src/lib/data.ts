@@ -8,7 +8,10 @@ export type Article = {
   readTime: string;
   imageUrl?: string;
   isDiary?: boolean;
+  paragraphs?: string[];
 };
+
+import { generatedArticles } from "./generatedArticles";
 
 export const articles: Article[] = [
   {
@@ -56,5 +59,6 @@ export const articles: Article[] = [
     category: "budget",
     date: "Sep 15, 2023",
     readTime: "3 min read",
-  }
+  },
+  ...generatedArticles
 ];

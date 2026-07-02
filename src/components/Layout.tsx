@@ -1,6 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
 import { motion } from "motion/react";
 import { Leaf } from "lucide-react";
+import * as React from "react";
 
 export default function Layout() {
   return (
@@ -22,7 +23,7 @@ export default function Layout() {
               S
             </motion.div>
             <span className="font-serif text-xl sm:text-2xl font-semibold tracking-tight text-text">
-              SIMPLE SENSE <span className="font-normal italic">MY</span>
+              SIMPLE SENSE <span className="font-normal italic">MALAYSIA</span>
             </span>
           </Link>
 
@@ -49,8 +50,6 @@ export default function Layout() {
         <span className="text-[10px] uppercase tracking-widest opacity-40 italic text-center sm:text-left">Simple Sense — Spend less. Live more. Malaysia.</span>
         <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 text-[10px] uppercase tracking-widest opacity-40 items-center">
           <Link to="#" className="hover:text-text transition-colors">Privacy</Link>
-          <span className="hidden sm:inline">•</span>
-          <span>Sponsored: Platinum Casino — play responsibly</span>
         </div>
       </footer>
     </div>

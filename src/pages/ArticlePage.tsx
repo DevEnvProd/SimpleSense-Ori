@@ -48,54 +48,62 @@ export default function ArticlePage({ isDiary = false }: { isDiary?: boolean }) 
         <p className="font-medium text-xl text-text">
           {article.excerpt}
         </p>
-        <p>
-          When I first started looking at my expenses, I was overwhelmed. The numbers seemed to flow out faster than they came in, and I couldn't figure out where the leaks were. It wasn't until I sat down with a quiet cup of tea and a notebook that things began to make sense.
-        </p>
-        <p>
-          We often buy things to soothe an immediate discomfort, confusing a quick dopamine hit with actual well-being. By slowing down the purchasing process, we allow ourselves space to feel whatever it is we are trying to avoid.
-        </p>
+        {article.paragraphs ? (
+          article.paragraphs.map((p, idx) => (
+            <p key={idx} dangerouslySetInnerHTML={{ __html: p }} />
+          ))
+        ) : (
+          <>
+            <p>
+              When I first started looking at my expenses, I was overwhelmed. The numbers seemed to flow out faster than they came in, and I couldn't figure out where the leaks were. It wasn't until I sat down with a quiet cup of tea and a notebook that things began to make sense.
+            </p>
+            <p>
+              We often buy things to soothe an immediate discomfort, confusing a quick dopamine hit with actual well-being. By slowing down the purchasing process, we allow ourselves space to feel whatever it is we are trying to avoid.
+            </p>
 
-        {isDiary && (
-          <div className="bg-surface border border-secondary/20 rounded-3xl p-8 my-10 shadow-sm">
-            <h3 className="font-serif text-2xl mb-6 text-secondary">Breakdown</h3>
-            <ul className="space-y-4 font-numbers text-lg">
-              <li className="flex justify-between border-b border-secondary/10 pb-2">
-                <span className="font-sans text-base">Housing & Utilities</span>
-                <span>RM 1,250</span>
-              </li>
-              <li className="flex justify-between border-b border-secondary/10 pb-2">
-                <span className="font-sans text-base">Groceries & Food</span>
-                <span>RM 680</span>
-              </li>
-              <li className="flex justify-between border-b border-secondary/10 pb-2">
-                <span className="font-sans text-base">Transport</span>
-                <span>RM 300</span>
-              </li>
-              <li className="flex justify-between border-b border-secondary/10 pb-2">
-                <span className="font-sans text-base">Entertainment (Inc. low-cost dates)</span>
-                <span>RM 120</span>
-              </li>
-              <li className="flex justify-between font-bold pt-2 text-primary">
-                <span className="font-sans text-base">Total Spent</span>
-                <span>RM 2,350</span>
-              </li>
-            </ul>
-          </div>
+            {isDiary && (
+              <div className="bg-surface border border-secondary/20 rounded-3xl p-8 my-10 shadow-sm">
+                <h3 className="font-serif text-2xl mb-6 text-secondary">Breakdown</h3>
+                <ul className="space-y-4 font-numbers text-lg">
+                  <li className="flex justify-between border-b border-secondary/10 pb-2">
+                    <span className="font-sans text-base">Housing & Utilities</span>
+                    <span>RM 1,250</span>
+                  </li>
+                  <li className="flex justify-between border-b border-secondary/10 pb-2">
+                    <span className="font-sans text-base">Groceries & Food</span>
+                    <span>RM 680</span>
+                  </li>
+                  <li className="flex justify-between border-b border-secondary/10 pb-2">
+                    <span className="font-sans text-base">Transport</span>
+                    <span>RM 300</span>
+                  </li>
+                  <li className="flex justify-between border-b border-secondary/10 pb-2">
+                    <span className="font-sans text-base">Entertainment (Inc. low-cost dates)</span>
+                    <span>RM 120</span>
+                  </li>
+                  <li className="flex justify-between font-bold pt-2 text-primary">
+                    <span className="font-sans text-base">Total Spent</span>
+                    <span>RM 2,350</span>
+                  </li>
+                </ul>
+              </div>
+            )}
+
+            <p>
+              The beauty of a budget isn't in restricting yourself, but in giving yourself permission to spend on what truly matters. If your joy comes from weekly coffee dates with a friend, budget for it. Cut mercilessly in areas that bring you no joy so you can spend lavishly on the few that do.
+            </p>
+
+            <div className="py-8 my-12 border-y border-primary/20 flex flex-col items-center text-center">
+              <p className="font-quote text-3xl text-primary leading-tight mb-4">
+                "We buy things we don't need, with money we don't have, to impress people we don't like."
+              </p>
+            </div>
+
+            <p>
+              In moving forward, I challenge you to a "no-spend" weekend. Pack a lunch, visit a free park, and simply exist. You might find that the best things in life truly are free.
+            </p>
+          </>
         )}
-
-        <p>
-          The beauty of a budget isn't in restricting yourself, but in giving yourself permission to spend on what truly matters. If your joy comes from weekly coffee dates with a friend, budget for it. Cut mercilessly in areas that bring you no joy so you can spend lavishly on the few that do.
-        </p>
-
-        <div className="py-8 my-12 border-y border-primary/20 flex flex-col items-center text-center">
-          <p className="font-quote text-3xl text-primary leading-tight mb-4">
-            "We buy things we don't need, with money we don't have, to impress people we don't like."
-          </p>
-        </div>
-
-        <p>
-          In moving forward, I challenge you to a "no-spend" weekend. Pack a lunch, visit a free park, and simply exist. You might find that the best things in life truly are free.
-        </p>
       </div>
 
       <div className="my-16 flex items-center justify-center relative">

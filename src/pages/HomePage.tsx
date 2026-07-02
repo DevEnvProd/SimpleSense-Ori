@@ -89,13 +89,6 @@ export default function HomePage() {
                 <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0"></div>
                 <p className="text-sm text-text/80">Date night under RM50: The local mamak crawl.</p>
               </li>
-              <li className="flex items-start gap-3 p-3 bg-white/50 rounded-xl">
-                <div className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0"></div>
-                <div>
-                  <p className="text-[10px] font-bold text-secondary uppercase tracking-widest mb-0.5">SPONSORED</p>
-                  <p className="text-sm text-text/80">Responsible gaming entertainment with <span className="underline decoration-secondary/30 underline-offset-2 font-medium">Platinum Casino</span>.</p>
-                </div>
-              </li>
             </ul>
           </div>
         </aside>
@@ -104,7 +97,7 @@ export default function HomePage() {
   );
 }
 
-function ArticleCard({ article }: { article: any }) {
+function ArticleCard({ article }: { article: any; key?: string }) {
   return (
     <Link to={`/article/${article.slug}`} className="block h-full group">
       <div className="p-6 bg-white/50 rounded-3xl border border-primary/10 h-full flex flex-col group-hover:shadow-sm transition-all group-hover:bg-white/70">
